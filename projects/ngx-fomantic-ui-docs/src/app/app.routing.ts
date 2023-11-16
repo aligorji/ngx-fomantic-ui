@@ -129,7 +129,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, { useHash: true, relativeLinkResolution: 'legacy' })
+        RouterModule.forRoot(appRoutes, { useHash: true })
     ],
     exports: [
         RouterModule
