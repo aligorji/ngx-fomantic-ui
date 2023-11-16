@@ -17,13 +17,9 @@ import { ConfirmModalComponent } from './confirm.modal';
         AlertModalComponent,
         ConfirmModalComponent
     ],
-    entryComponents: [
-        AlertModalComponent,
-        ConfirmModalComponent
-    ],
     schemas: [
-      CUSTOM_ELEMENTS_SCHEMA,
-      NO_ERRORS_SCHEMA
+        CUSTOM_ELEMENTS_SCHEMA,
+        NO_ERRORS_SCHEMA
     ]
 })
 export class DemoModalsModule {}

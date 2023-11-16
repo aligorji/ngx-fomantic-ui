@@ -8,29 +8,26 @@ import {FuiModal} from './components/modal';
 import {FuiModalDimmer} from './components/dimmer';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FuiDimmerModule,
-    FuiTransitionModule,
-    FuiUtilityModule
-  ],
-  declarations: [
-    FuiModal,
-    FuiModalDimmer
-  ],
-  exports: [
-    FuiModal
-  ],
-  providers: [
-    FuiModalService
-  ],
-  entryComponents: [
-    FuiModal
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA,
-    NO_ERRORS_SCHEMA
-  ]
+    imports: [
+        CommonModule,
+        FuiDimmerModule,
+        FuiTransitionModule,
+        FuiUtilityModule
+    ],
+    declarations: [
+        FuiModal,
+        FuiModalDimmer
+    ],
+    exports: [
+        FuiModal
+    ],
+    providers: [
+        FuiModalService
+    ],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,
+        NO_ERRORS_SCHEMA
+    ]
 })
 export class FuiModalModule {
 }

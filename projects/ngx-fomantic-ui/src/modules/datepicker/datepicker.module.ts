@@ -20,42 +20,37 @@ import {
 } from './directives/datepicker.directive';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    FuiPopupModule,
-    FuiLocalizationModule,
-    FuiUtilityModule
-  ],
-  declarations: [
-    FuiCalendarItem,
-
-    FuiCalendarViewTitle,
-    FuiCalendarYearView,
-    FuiCalendarMonthView,
-    FuiCalendarDateView,
-    FuiCalendarHourView,
-    FuiCalendarMinuteView,
-
-    FuiDatepicker,
-    FuiDatepickerDirective,
-    FuiDatepickerDirectiveValueAccessor,
-    FuiDatepickerDirectiveValidator,
-    FuiDatepickerInputDirective
-  ],
-  exports: [
-    FuiDatepickerDirective,
-    FuiDatepickerDirectiveValueAccessor,
-    FuiDatepickerDirectiveValidator,
-    FuiDatepickerInputDirective
-  ],
-  entryComponents: [
-    FuiDatepicker
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA,
-    NO_ERRORS_SCHEMA
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        FuiPopupModule,
+        FuiLocalizationModule,
+        FuiUtilityModule
+    ],
+    declarations: [
+        FuiCalendarItem,
+        FuiCalendarViewTitle,
+        FuiCalendarYearView,
+        FuiCalendarMonthView,
+        FuiCalendarDateView,
+        FuiCalendarHourView,
+        FuiCalendarMinuteView,
+        FuiDatepicker,
+        FuiDatepickerDirective,
+        FuiDatepickerDirectiveValueAccessor,
+        FuiDatepickerDirectiveValidator,
+        FuiDatepickerInputDirective
+    ],
+    exports: [
+        FuiDatepickerDirective,
+        FuiDatepickerDirectiveValueAccessor,
+        FuiDatepickerDirectiveValidator,
+        FuiDatepickerInputDirective
+    ],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,
+        NO_ERRORS_SCHEMA
+    ]
 })
 export class FuiDatepickerModule {
 }
