@@ -5,7 +5,7 @@ import {
   Injectable,
   Injector,
   Provider,
-  ReflectiveInjector,
+  StaticProvider,
   TemplateRef,
   Type,
   ViewContainerRef
@@ -18,19 +18,26 @@ export interface IImplicitContext<T> {
 @Injectable()
 export class FuiComponentFactory {
   constructor(private _applicationRef: ApplicationRef,
-              private _componentFactoryResolver: ComponentFactoryResolver,
-              private _injector: Injector) {
+    private _componentFactoryResolver: ComponentFactoryResolver,
+    private _injector: Injector) {
   }
 
-  public createComponent<T>(type: Type<T>, providers: Provider[] = []): ComponentRef<T> {
+  public createComponent<T>(type: Type<T>, providers: StaticProvider[] = []): ComponentRef<T> {
     // Resolve a factory for creating components of type `type`.
     const factory = this._componentFactoryResolver.resolveComponentFactory(type as Type<T>);
 
     // Resolve and create an injector with the specified providers.
-    const injector = ReflectiveInjector.resolveAndCreate(
+    //(Deprecated !)
+    /*const injector = ReflectiveInjector.resolveAndCreate(
       providers,
       this._injector
-    );
+    );*/
+    // (New !)
+    // change input parameter this function Provider -> StaticProvider
+    // https://github.com/angular/angular/blob/main/CHANGELOG.md#core-23 (Search 'ReflectiveInjector')
+    // https://medium.com/@a.yurich.zuev/angular-how-staticinjector-replaces-reflectiveinjector-6f303d2798f6
+    // https://angular.io/api/core/Injector#create
+    const injector = Injector.create({ providers: providers, parent: this._injector });
 
     // Create a component using the previously resolved factory & injector.
     const componentRef = factory.create(injector);
