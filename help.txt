@@ -1,11 +1,16 @@
-npm run build:lib
-ng serve
+for change:
+> npm run build:lib
 
-npm run build:lib:prod
+for run demo:
+> ng serve
 
-cd dist
+for build prod:
+> npm run build:lib:prod
 
-npm init --scope=aligorji
+for publish npm:
+> cd dist
+
+> npm init --scope=aligorji
 
 ===========================================================
 @aligorji/ngx-fomantic-ui
