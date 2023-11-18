@@ -93,9 +93,6 @@
               ]
             }
           },
-          "allowedCommonJsDependencies": [
-            "highlight.js"
-          ],
           "defaultConfiguration": ""
         },
         "serve": {
