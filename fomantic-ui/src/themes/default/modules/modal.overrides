@@ -1,0 +1,7 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+@computerWidth: 700px;
+@largeMonitorWidth: 750px;
+@widescreenMonitorWidth: 800px;

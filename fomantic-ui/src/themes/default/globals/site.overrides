@@ -1,0 +1,18 @@
+/*******************************
+        Global Overrides
+*******************************/
+
+@fontName: "ags1";
+@fontFileNameLatin: "ags2";
+@fontFileNameSupplement: "ags3";
+@fallbackFonts: "ags4";
+    
+@importFonts: false;
+
+
+@headerFont: @fontName;
+@pageFont: @fontName;
+@importGoogleFonts: false;
+@emSize: 20px;
+@fontSize: 20px;
+@inputVerticalPadding: @relative8px;
