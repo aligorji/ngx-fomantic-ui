@@ -7,13 +7,15 @@ import { ModalConfig, ModalSize } from '../classes/modal-config';
 @Component({
     selector: 'fui-modal',
     template: `
+<div class="dimmable dimmed"
+[class.scrolling]="_mustScroll && isAutoScroll">
 <!-- Page dimmer for modal background. -->
 <fui-modal-dimmer [ngClass]="{'top aligned': !isCentered}"
                   [class.inverted]="isInverted"
                   [(isDimmed)]="dimBackground"
                   [transitionDuration]="transitionDuration"
                   (mouseup)="onDimmerMouseUp($event)"
-                  (mousedown)="onDimmerMouseDown($event)">
+                  (mousedown)="onDimmerMouseDown($event)" #suiModal>
 
     <!-- Modal component, with transition component attached -->
     <div class="ui modal"
@@ -21,7 +23,6 @@ import { ModalConfig, ModalSize } from '../classes/modal-config';
          [class.active]="transitionController?.isVisible"
          [class.fullscreen]="isFullScreen"
          [class.basic]="isBasic"
-         [class.scrolling]="mustScroll"
          [class.inverted]="isInverted"
          [ngClass]="dynamicClasses"
          (click)="onClick($event)"
@@ -37,6 +38,7 @@ import { ModalConfig, ModalSize } from '../classes/modal-config';
         <div #templateSibling></div>
     </div>
 </fui-modal-dimmer>
+</div>
 `,
     styles: [``]
 })
@@ -91,6 +93,8 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
     // Parent element of modal before relocation to document body.
     private _originalContainer?: Element;
 
+    @ViewChild('suiModal') suiModal: any;
+
     constructor(private _renderer: Renderer2, private _element: ElementRef, private _componentFactory: FuiComponentFactory) {
         // Initialise with default configuration from `ModalConfig` (to avoid writing defaults twice).
         const config = new ModalConfig<undefined, T, U>();
@@ -142,7 +146,7 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
     }
 
     // Whether the modal currently is displaying a scrollbar.
-    private _mustScroll: boolean;
+    public _mustScroll: boolean;
 
     @Input()
     public get mustScroll(): boolean {
@@ -151,9 +155,6 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
 
     public set mustScroll(mustScroll: boolean) {
         this._mustScroll = mustScroll;
-        // 'Cache' value in _mustAlwaysScroll so that if `true`, _mustScroll isn't ever auto-updated.
-        this._mustAlwaysScroll = mustScroll;
-        this.updateScroll();
     }
 
     // Whether the modal shows against a light background.
@@ -170,7 +171,13 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
 
     public ngOnInit(): void {
         // Transition the modal to be visible.
-        this.transitionController.animate(new Transition(this.transition, this.transitionDuration, TransitionDirection.In));
+        this.transitionController.animate(new Transition(this.transition, this.transitionDuration, TransitionDirection.In, () => {
+            setTimeout(() => {
+                if (this.suiModal && this.suiModal.scrollTop) {
+                    this.suiModal.scrollTop();
+                }
+            });
+        }));
         setTimeout(() => this.dimBackground = true);
     }
 
@@ -185,7 +192,6 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
         }
 
         const element = this._modalElement.nativeElement as Element;
-        setTimeout(() => this.updateScroll());
 
         // Focus any element with [autofocus] attribute.
         const autoFocus = element.querySelector('[autofocus]') as HTMLElement | null;
@@ -251,11 +257,6 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
         }
     }
 
-    @HostListener('window:resize')
-    public onDocumentResize(): void {
-        this.updateScroll();
-    }
-
     // Dismisses the modal with a transition, firing the callback after the modal has finished transitioning.
     private dismiss(callback: () => void = () => {
     }): void {
@@ -279,10 +280,10 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
     }
 
     // Decides whether the modal needs to reposition to allow scrolling.
-    private updateScroll(): void {
+    get isAutoScroll(): boolean {
 
         // _mustAlwaysScroll works by stopping _mustScroll from being automatically updated, so it stays `true`.
-        if (!this._mustAlwaysScroll && this._modalElement) {
+        if (this._mustScroll && this._modalElement) {
 
             // Fomantic UI modal margin and dimmer padding are 1rem, which is relative to the global font size, so for compatibility:
             const fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size'));
@@ -290,7 +291,8 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
             const element = this._modalElement.nativeElement as Element;
 
             // The modal must scroll if the window height is smaller than the modal height + both margins.
-            this._mustScroll = window.innerHeight < element.clientHeight + margin * 2;
+            return window.innerHeight < element.clientHeight + margin * 2;
         }
+        return false;
     }
 }
