@@ -79,8 +79,8 @@ export class ModalPage {
                     name: 'size',
                     type: 'ModalSize',
                     description: 'Sets the modal size. ' +
-                                 'Available options are: <code>mini</code>, <code>tiny</code>, <code>small</code>, ' +
-                                 '<code>normal</code> & <code>large</code>.',
+                        'Available options are: <code>mini</code>, <code>tiny</code>, <code>small</code>, ' +
+                        '<code>normal</code> & <code>large</code>.',
                     defaultValue: 'normal'
                 },
                 {
@@ -111,7 +111,7 @@ export class ModalPage {
                     name: 'mustScroll',
                     type: 'boolean',
                     description: 'Whether or not the modal should be always scrolling. ' +
-                    'Should be used when the modal content is dynamic and can exceed the height of the browser',
+                        'Should be used when the modal content is dynamic and can exceed the height of the browser',
                     defaultValue: 'false'
                 },
                 {
@@ -241,13 +241,14 @@ export class ModalExampleTemplate {
 
     public dynamicContent = 'Example of dynamic content.';
 
-    constructor(public modalService: FuiModalService) {}
+    constructor(public modalService: FuiModalService) { }
 
     public open(dynamicContent: string = 'Example'): void {
         const config = new TemplateModalConfig<{ data: string }, string, string>(this.modalTemplate);
 
         config.closeResult = 'dismissed';
         config.context = { data: dynamicContent };
+        config.hideCloseButton = true;
 
         this.modalService
             .open(config)
@@ -270,7 +271,7 @@ interface IConfirmModalContext {
     template: exampleComponentModalTemplate
 })
 export class ConfirmModalComponent {
-    constructor(public modal: FuiBaseModal<IConfirmModalContext, void, void>) {}
+    constructor(public modal: FuiBaseModal<IConfirmModalContext, void, void>) { }
 }
 
 export class ConfirmModal extends ComponentModalConfig<IConfirmModalContext, void, void> {
@@ -292,7 +293,7 @@ export class ModalExampleComponent {
     public availableSizes: string[] = ['mini', 'tiny', 'small', 'normal', 'large'];
     public size: ModalSize = ModalSize.Small;
 
-    constructor(public modalService: FuiModalService) {}
+    constructor(public modalService: FuiModalService) { }
 
     public open(): void {
         this.modalService
