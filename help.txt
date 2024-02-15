@@ -14,7 +14,8 @@ for publish npm:
 
 > npm init --scope=aligorji
 
-Remove "scripts" property in 'dist/ngx-fomantic-ui/package.json'
+copy from [package_npm.json]
+--Remove "scripts" property in 'dist/ngx-fomantic-ui/package.json'
 
 ===========================================================
 @aligorji/ngx-fomantic-ui
