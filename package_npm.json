@@ -1,6 +1,6 @@
 {
     "name": "@aligorji/ngx-fomantic-ui",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "peerDependencies": {
         "@angular/common": "^17.0.3",
         "@angular/core": "^17.0.3",
