@@ -1,6 +1,11 @@
 goto root project (command line)
 
-for change:
+for update angular & packages
+note: update angular version number by number 17 > 18 > 19 > 20
+> ng update @angular/core@18 @angular/cli@18
+update manual package.json in [projects\ngx-fomantic-ui\package.json] version by [package.json]
+
+for build change:
 > npm run build:lib
 
 for run demo:
