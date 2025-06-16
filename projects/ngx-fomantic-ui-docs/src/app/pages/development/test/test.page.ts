@@ -2,6 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {FuiToastContainer} from 'ngx-fomantic-ui';
 
 @Component({
+  standalone: false,
     selector: 'demo-page-test',
     templateUrl: './test.page.html'
 })

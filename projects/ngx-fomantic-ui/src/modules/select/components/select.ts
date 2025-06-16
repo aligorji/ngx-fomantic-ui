@@ -5,6 +5,7 @@ import {FuiSelectBase} from '../classes/select-base';
 import {FuiSelectOption} from './select-option';
 
 @Component({
+  standalone: false,
   selector: 'fui-select',
   template: `
                    <!-- Query input -->
@@ -185,6 +186,7 @@ export class FuiSelect<T, U> extends FuiSelectBase<T, U> implements ICustomValue
 
 // Value accessor directive for the select to support ngModel.
 @Directive({
+  standalone: false,
   selector: 'fui-select',
   host: {
     '(selectedOptionChange)': 'onChange($event)',

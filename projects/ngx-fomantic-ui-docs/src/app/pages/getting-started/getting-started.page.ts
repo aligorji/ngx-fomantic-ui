@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+    standalone: false,
     selector: 'demo-page-getting-started',
     templateUrl: './getting-started.page.html',
     styles: [`

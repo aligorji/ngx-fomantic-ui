@@ -17,6 +17,7 @@ import {DatepickerMode, FuiDatepicker} from '../components/datepicker';
 import {CalendarConfig, DateConfig, DatetimeConfig, MonthConfig, TimeConfig, YearConfig} from '../classes/calendar-config';
 
 @Directive({
+  standalone: false,
   selector: '[fuiDatepicker]',
   providers: [customValidatorFactory(FuiDatepickerDirective)]
 })
@@ -195,6 +196,7 @@ export class FuiDatepickerDirective
 }
 
 @Directive({
+  standalone: false,
   selector: '[fuiDatepicker]',
   host: {'(pickerSelectedDateChange)': 'onChange($event)'},
   providers: [customValueAccessorFactory(FuiDatepickerDirectiveValueAccessor)]
@@ -206,6 +208,7 @@ export class FuiDatepickerDirectiveValueAccessor extends CustomValueAccessor<Dat
 }
 
 @Directive({
+  standalone: false,
   selector: '[fuiDatepicker]',
   host: {'(pickerValidatorChange)': 'onValidatorChange()'},
   providers: [customValidatorFactory(FuiDatepickerDirectiveValidator)]

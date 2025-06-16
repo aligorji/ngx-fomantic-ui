@@ -52,6 +52,7 @@ const exampleVariationsTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-progress',
     templateUrl: './progress.page.html'
 })
@@ -118,6 +119,7 @@ export class ProgressPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-progress-standard',
     template: exampleStandardTemplate
 })
@@ -129,6 +131,7 @@ export class ProgressExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-progress-variations',
     template: exampleVariationsTemplate
 })

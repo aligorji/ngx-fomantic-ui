@@ -3,6 +3,7 @@ import {FuiToastTitle} from '../directives/toast-title';
 import {FuiToastMessage} from '../directives/toast-message';
 
 @Component({
+  standalone: false,
   selector: 'fui-toast',
   exportAs: 'fuiToast',
   template: `

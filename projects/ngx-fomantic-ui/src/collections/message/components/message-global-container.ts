@@ -15,6 +15,7 @@ export const MessagePosition = {
 };
 
 @Component({
+  standalone: false,
   selector: 'fui-message-global-container',
   template: `
 <div class="global container" [ngClass]="dynamicClasses" [style.width.px]="dynamicWidth">

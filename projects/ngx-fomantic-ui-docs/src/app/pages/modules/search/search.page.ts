@@ -37,6 +37,7 @@ const exampleTemplateTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-search',
     templateUrl: './search.page.html'
 })
@@ -151,6 +152,7 @@ interface IOption {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-search-standard',
     template: exampleStandardTemplate
 })
@@ -178,6 +180,7 @@ export class SearchExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-search-remote',
     template: exampleRemoteTemplate
 })
@@ -196,6 +199,7 @@ export class SearchExampleRemote extends SearchExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-search-template',
     template: exampleTemplateTemplate
 })

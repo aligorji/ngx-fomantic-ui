@@ -16,6 +16,7 @@ import {DropdownAutoCloseType, DropdownService} from '../services/dropdown.servi
 import {FuiDropdownMenu} from './dropdown-menu';
 
 @Directive({
+  standalone: false,
   selector: '[fuiDropdown]'
 })
 export class FuiDropdown implements AfterContentInit {

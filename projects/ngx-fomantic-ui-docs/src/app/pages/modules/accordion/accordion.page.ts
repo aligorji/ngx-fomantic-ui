@@ -74,6 +74,7 @@ const exampleManualTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-accordion',
     templateUrl: './accordion.page.html'
 })
@@ -133,18 +134,21 @@ export class AccordionPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-accordion-standard',
     template: exampleStandardTemplate
 })
 export class AccordionExampleStandard {}
 
 @Component({
+    standalone: false,
     selector: 'example-accordion-styled',
     template: exampleStyledTemplate
 })
 export class AccordionExampleStyled {}
 
 @Component({
+    standalone: false,
     selector: 'example-accordion-manual',
     template: exampleManualTemplate
 })

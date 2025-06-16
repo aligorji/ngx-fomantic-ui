@@ -15,6 +15,7 @@ export class CalendarRangeHourService extends CalendarRangeService {
 }
 
 @Component({
+  standalone: false,
   selector: 'fui-calendar-hour-view',
   template: `
 <table class="ui celled center aligned unstackable table four column hour">

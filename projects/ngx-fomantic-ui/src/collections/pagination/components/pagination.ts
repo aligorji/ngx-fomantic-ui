@@ -1,6 +1,7 @@
 import { Component, EventEmitter, HostBinding, Input, OnChanges, Output } from '@angular/core';
 
 @Component({
+    standalone: false,
     selector: 'fui-pagination',
     template: `
 <a *ngIf="hasBoundaryLinks" class="item"  (click)="setPage(1)" [class.disabled]="page===1">

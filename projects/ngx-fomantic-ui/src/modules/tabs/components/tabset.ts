@@ -4,6 +4,7 @@ import {FuiTabContent} from '../directives/tab-content';
 import {Tab} from '../classes/tab';
 
 @Component({
+  standalone: false,
   selector: 'fui-tabset',
   template: `<ng-content></ng-content>`
 })

@@ -4,6 +4,7 @@ import {FuiSidebar} from './sidebar';
 import {FuiSidebarSibling} from './sidebar-sibling';
 
 @Component({
+  standalone: false,
   selector: 'fui-sidebar-container',
   template: `<ng-content></ng-content>`,
   styles: [`

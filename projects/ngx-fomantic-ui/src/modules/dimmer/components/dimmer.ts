@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, ElementRef, EventEmitter, HostBinding, Hos
 import {FuiTransition, Transition, TransitionController, TransitionDirection} from '../../transition/internal';
 
 @Component({
+  standalone: false,
   selector: 'fui-dimmer',
   template: `
 <div [class.content]="wrapContent">

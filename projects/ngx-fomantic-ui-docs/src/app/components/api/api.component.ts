@@ -23,6 +23,7 @@ export interface IApi {
 export type ApiDefinition = IApi[];
 
 @Component({
+    standalone: false,
     selector: 'demo-api',
     templateUrl: './api.component.html',
     styleUrls: ['./api.component.css']

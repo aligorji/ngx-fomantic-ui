@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation, ViewChild, ElementRef } fr
 import { HighlightJS, HighlightResult } from 'ngx-highlightjs';
 
 @Component({
+  standalone: false,
   selector: 'demo-codeblock',
   template: `
     <pre><code [innerHTML]="html"></code></pre>

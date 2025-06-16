@@ -3,6 +3,7 @@ import {FuiComponentFactory} from '../../../misc/util/internal';
 import {IResultContext} from './search';
 
 @Component({
+  standalone: false,
   selector: 'fui-search-result',
   template: `
 <span #templateSibling></span>

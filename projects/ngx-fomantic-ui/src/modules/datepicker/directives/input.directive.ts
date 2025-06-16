@@ -6,6 +6,7 @@ import {FuiDatepickerDirective, FuiDatepickerDirectiveValueAccessor} from './dat
 import {DateParser, InternalDateParser} from '../classes/date-parser';
 
 @Directive({
+  standalone: false,
   selector: 'input[fuiDatepicker]'
 })
 export class FuiDatepickerInputDirective {

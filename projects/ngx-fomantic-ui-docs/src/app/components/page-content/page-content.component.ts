@@ -1,6 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
+    standalone: false,
     selector: 'demo-page-content',
     template: `
 <ng-content></ng-content>

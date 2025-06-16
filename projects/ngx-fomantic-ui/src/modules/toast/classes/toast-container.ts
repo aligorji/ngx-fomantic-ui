@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FuiToastConfig} from './toast-config';
 
 @Component({
+  standalone: false,
   selector: 'fui-toast-container',
   exportAs: 'fuiToastContainer',
   template: `

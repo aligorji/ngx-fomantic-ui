@@ -3,7 +3,8 @@ import {TransitionController} from '../classes/transition-controller';
 
 @Directive({
   selector: '[fuiTransition]',
-  exportAs: 'transition'
+  exportAs: 'transition',
+  standalone: false
 })
 export class FuiTransition {
   @HostBinding('class.transition')

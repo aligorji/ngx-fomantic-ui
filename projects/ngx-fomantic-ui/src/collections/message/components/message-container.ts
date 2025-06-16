@@ -6,6 +6,7 @@ import {FuiComponentFactory} from '../../../misc/util/internal';
 import {MessageController} from '../classes/message-controller';
 
 @Component({
+  standalone: false,
   selector: 'fui-message-container',
   template: `
 <div #containerSibling></div>

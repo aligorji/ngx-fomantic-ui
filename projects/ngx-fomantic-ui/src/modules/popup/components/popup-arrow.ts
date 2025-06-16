@@ -2,6 +2,7 @@ import {Component, HostBinding, Input} from '@angular/core';
 import {PositioningPlacement} from '../../../misc/util/internal';
 
 @Component({
+  standalone: false,
   selector: 'fui-popup-arrow',
   template: `
 <div class="dynamic arrow" [attr.direction]="direction" *ngIf="alignment == 'center'"></div>

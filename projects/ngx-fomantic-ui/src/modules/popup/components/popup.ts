@@ -5,6 +5,7 @@ import { IPopup } from '../classes/popup-controller';
 import { TemplatePopupConfig } from '../classes/popup-template-controller';
 
 @Component({
+    standalone: false,
     selector: 'fui-popup',
     template: `
 <div class="ui popup"

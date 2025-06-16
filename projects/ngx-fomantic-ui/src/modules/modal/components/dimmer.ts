@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, ElementRef, HostBinding, Renderer2} from '
 import {FuiDimmer} from '../../dimmer/internal';
 
 @Component({
+  standalone: false,
   selector: 'fui-modal-dimmer',
   template: `<ng-content></ng-content>`,
   styles: [`

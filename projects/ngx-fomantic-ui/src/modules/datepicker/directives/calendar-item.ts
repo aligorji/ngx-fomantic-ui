@@ -15,6 +15,7 @@ export class CalendarItem {
 }
 
 @Directive({
+  standalone: false,
   selector: '[calendarItem]'
 })
 export class FuiCalendarItem {

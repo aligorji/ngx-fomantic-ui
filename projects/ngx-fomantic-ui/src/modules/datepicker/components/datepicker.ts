@@ -14,6 +14,7 @@ export const DatepickerMode = {
 };
 
 @Component({
+  standalone: false,
   selector: 'fui-datepicker',
   template: `
 <ng-container [ngSwitch]="service.currentView">

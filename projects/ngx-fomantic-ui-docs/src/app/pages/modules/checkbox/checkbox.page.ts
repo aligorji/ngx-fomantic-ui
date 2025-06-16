@@ -76,6 +76,7 @@ const exampleStyledTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-checkbox',
     templateUrl: './checkbox.page.html'
 })
@@ -173,6 +174,7 @@ export class CheckboxPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-checkbox-standard',
     template: exampleStandardTemplate
 })
@@ -183,6 +185,7 @@ export class CheckboxExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-checkbox-radio-button',
     template: exampleRadioButtonTemplate
 })
@@ -191,6 +194,7 @@ export class CheckboxExampleRadioButton {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-checkbox-styled',
     template: exampleStyledTemplate
 })

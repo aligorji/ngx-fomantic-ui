@@ -5,6 +5,7 @@ import { ModalControls, ModalResult } from '../classes/modal-controls';
 import { ModalConfig, ModalSize } from '../classes/modal-config';
 
 @Component({
+    standalone: false,
     selector: 'fui-modal',
     template: `
 <!-- Page dimmer for modal background. -->

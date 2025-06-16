@@ -99,6 +99,7 @@ const supportedLanguages: ISupportedLanguage[] = [
 ];
 
 @Component({
+    standalone: false,
     selector: 'demo-page-localization',
     templateUrl: './localization.page.html'
 })
@@ -195,6 +196,7 @@ interface ILocaleValues {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-localization',
     template: exampleTemplate
 })

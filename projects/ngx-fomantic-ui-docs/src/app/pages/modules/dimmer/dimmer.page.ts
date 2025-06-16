@@ -32,6 +32,7 @@ const exampleVariationsTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-dimmer',
     templateUrl: './dimmer.page.html'
 })
@@ -80,6 +81,7 @@ export class DimmerPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-dimmer-standard',
     template: exampleStandardTemplate
 })
@@ -89,6 +91,7 @@ export class DimmerExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-dimmer-variations',
     template: exampleVariationsTemplate
 })

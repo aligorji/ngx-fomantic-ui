@@ -176,6 +176,7 @@ const exampleSearchLookupTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-select',
     templateUrl: './select.page.html'
 })
@@ -473,6 +474,7 @@ const namedOptions: IOption[] = options.map(name => ({ name }));
 const idOptions: IOption[] = namedOptions.map(({ name }, id) => ({ name, id }));
 
 @Component({
+    standalone: false,
     selector: 'example-select-standard',
     template: exampleStandardTemplate
 })
@@ -487,6 +489,7 @@ export class SelectExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-select-variations',
     template: exampleVariationsTemplate
 })
@@ -496,6 +499,7 @@ export class SelectExampleVariations {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-clearable-select',
     template: exampleClearableTemplate
 })
@@ -505,6 +509,7 @@ export class SelectClearableExample {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-select-in-menu-search',
     template: exampleInMenuSearchTemplate
 })
@@ -514,6 +519,7 @@ export class SelectExampleInMenuSearch {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-select-template',
     template: exampleTemplateTemplate
 })
@@ -527,6 +533,7 @@ export class SelectExampleTemplate {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-select-search-lookup',
     template: exampleSearchLookupTemplate
 })

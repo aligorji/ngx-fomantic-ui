@@ -76,6 +76,7 @@ const exampleIconTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-toast',
     templateUrl: './toast.page.html'
 })
@@ -158,48 +159,56 @@ export class ToastPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-toast-minimal',
     template: exampleMinimalTemplate
 })
 export class ToastExampleMinimal {}
 
 @Component({
+    standalone: false,
     selector: 'example-toast-titled',
     template: exampleTitledTemplate
 })
 export class ToastExampleTitled {}
 
 @Component({
+    standalone: false,
     selector: 'example-toast-progressbar',
     template: exampleProgressbarTemplate
 })
 export class ToastExampleProgressbar {}
 
 @Component({
+    standalone: false,
     selector: 'example-toast-type',
     template: exampleTypeTemplate
 })
 export class ToastExampleType {}
 
 @Component({
+    standalone: false,
     selector: 'example-toast-duration',
     template: exampleDurationTemplate
 })
 export class ToastExampleDuration {}
 
 @Component({
+    standalone: false,
     selector: 'example-toast-messagestyle',
     template: exampleMessageStyleTemplate
 })
 export class ToastExampleMessageStyle {}
 
 @Component({
+    standalone: false,
     selector: 'example-toast-decreasing',
     template: exampleDecreasingTemplate
 })
 export class ToastExampleDecreasing {}
 
 @Component({
+    standalone: false,
     selector: 'example-toast-icon',
     template: exampleIconTemplate
 })

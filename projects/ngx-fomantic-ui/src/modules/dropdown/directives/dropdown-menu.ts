@@ -19,6 +19,7 @@ import {DropdownAutoCloseType, DropdownService} from '../services/dropdown.servi
 import 'element-closest';
 
 @Directive({
+  standalone: false,
   // We must attach to every '.item' as Angular doesn't support > selectors.
   selector: '.item'
 })
@@ -67,6 +68,7 @@ export class FuiDropdownMenuItem {
 }
 
 @Directive({
+  standalone: false,
   selector: '[fuiDropdownMenu]'
 })
 export class FuiDropdownMenu extends FuiTransition implements AfterContentInit, OnDestroy {

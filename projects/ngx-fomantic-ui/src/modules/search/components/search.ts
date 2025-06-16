@@ -22,6 +22,7 @@ export interface IResultContext<T> extends ITemplateRefContext<T> {
 }
 
 @Component({
+  standalone: false,
   selector: 'fui-search',
   template: `
 <div class="ui input" [class.icon]="hasIcon" (click)="onClick($event)">

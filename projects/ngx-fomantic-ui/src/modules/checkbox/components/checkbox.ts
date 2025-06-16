@@ -2,6 +2,7 @@ import {Component, Directive, ElementRef, EventEmitter, HostBinding, HostListene
 import {CustomValueAccessor, customValueAccessorFactory, ICustomValueAccessorHost} from '../../../misc/util/internal';
 
 @Component({
+  standalone: false,
   selector: 'fui-checkbox',
   exportAs: 'fuiCheckbox',
   template: `
@@ -95,6 +96,7 @@ export class FuiCheckbox implements ICustomValueAccessorHost<boolean> {
 }
 
 @Directive({
+  standalone: false,
   selector: 'fui-checkbox',
   host: {
     '(checkChange)': 'onChange($event)',

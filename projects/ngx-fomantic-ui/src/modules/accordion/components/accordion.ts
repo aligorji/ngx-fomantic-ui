@@ -3,6 +3,7 @@ import {FuiAccordionPanel} from './accordion-panel';
 import {FuiAccordionService} from '../services/accordion.service';
 
 @Component({
+  standalone: false,
   selector: 'fui-accordion',
   template: `
 <ng-content></ng-content>

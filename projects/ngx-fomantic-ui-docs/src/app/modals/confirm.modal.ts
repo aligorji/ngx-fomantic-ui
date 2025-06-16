@@ -7,6 +7,7 @@ interface IConfirmModalContext {
 }
 
 @Component({
+    standalone: false,
     selector: 'demo-modal-confirm',
     template: `
 <div class="header" *ngIf="modal.context.title">{{ modal.context.title }}</div>

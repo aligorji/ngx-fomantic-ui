@@ -20,6 +20,7 @@ const exampleStandardTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-collapse',
     templateUrl: './collapse.page.html'
 })
@@ -50,6 +51,7 @@ export class CollapsePage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-collapse-standard',
     template: exampleStandardTemplate
 })

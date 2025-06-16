@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FuiPopupConfig } from 'ngx-fomantic-ui';
 
 @Component({
+    standalone: false,
     selector: 'demo-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']

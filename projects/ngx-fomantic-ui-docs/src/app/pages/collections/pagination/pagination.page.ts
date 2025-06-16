@@ -77,6 +77,7 @@ const exampleRotationTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-pagination',
     templateUrl: './pagination.page.html'
 })
@@ -152,6 +153,7 @@ export class PaginationPage {
 
 
 @Component({
+    standalone: false,
     selector: 'example-pagination-standard',
     template: exampleStandardTemplate
 })
@@ -171,6 +173,7 @@ export class PaginationExampleStandard implements OnInit {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-pagination-maxsize',
     template: exampleMaxSizeTemplate
 })
@@ -190,6 +193,7 @@ export class PaginationExampleMaxSize implements OnInit {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-pagination-rotation',
     template: exampleRotationTemplate
 })

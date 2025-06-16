@@ -83,6 +83,7 @@ const exampleStyledTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-tabs',
     templateUrl: './tabs.page.html'
 })
@@ -153,12 +154,14 @@ export class TabsPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-tab-standard',
     template: exampleStandardTemplate
 })
 export class TabExampleStandard {}
 
 @Component({
+    standalone: false,
     selector: 'example-tab-properties',
     template: examplePropertiesTemplate
 })
@@ -179,6 +182,7 @@ export class TabExampleProperties {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-tab-dynamic',
     template: exampleDynamicTemplate
 })
@@ -204,6 +208,7 @@ export class TabExampleDynamic {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-tab-styled',
     template: exampleStyledTemplate
 })

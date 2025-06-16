@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {CalendarRangeService} from '../services/calendar-range.service';
 
 @Component({
+  standalone: false,
   selector: 'fui-calendar-view-title',
   template: `
 <span class="title link" (click)="onZoomOut.emit()">

@@ -2,6 +2,7 @@ import {Component, Directive, ElementRef, EventEmitter, HostBinding, HostListene
 import {CustomValueAccessor, customValueAccessorFactory, ICustomValueAccessorHost} from '../../../misc/util/internal';
 
 @Component({
+  standalone: false,
   selector: 'fui-radio-button',
   template: `
 <input class="hidden"
@@ -104,6 +105,7 @@ export class FuiRadio<T> implements ICustomValueAccessorHost<T> {
 }
 
 @Directive({
+  standalone: false,
   selector: 'fui-radio-button',
   host: {
     '(currentValueChange)': 'onChange($event)',

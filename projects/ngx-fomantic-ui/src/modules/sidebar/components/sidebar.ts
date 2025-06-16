@@ -2,6 +2,7 @@ import {Component, ElementRef, EventEmitter, HostBinding, Input, Output, Rendere
 import {SidebarDirection, SidebarService, SidebarTransition} from '../services/sidebar.service';
 
 @Component({
+  standalone: false,
   selector: 'fui-sidebar',
   template: `<ng-content></ng-content>`
 })

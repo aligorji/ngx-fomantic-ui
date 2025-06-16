@@ -5,6 +5,7 @@ import {FuiSelectBase} from '../classes/select-base';
 import {FuiSelectOption} from './select-option';
 
 @Component({
+  standalone: false,
   selector: 'fui-multi-select',
   template: `
 <!-- Dropdown icon -->
@@ -249,6 +250,7 @@ export class FuiMultiSelect<T, U> extends FuiSelectBase<T, U> implements ICustom
 
 // Value accessor directive for the select to support ngModel.
 @Directive({
+  standalone: false,
   selector: 'fui-multi-select',
   host: {
     '(selectedOptionsChange)': 'onChange($event)',

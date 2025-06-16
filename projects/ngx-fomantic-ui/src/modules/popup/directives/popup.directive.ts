@@ -7,6 +7,7 @@ import { ITemplatePopupConfig, ITemplatePopupContext, FuiPopupTemplateController
 const templateRef = TemplateRef;
 
 @Directive({
+    standalone: false,
     selector: '[fuiPopup]',
     exportAs: 'fuiPopup'
 })

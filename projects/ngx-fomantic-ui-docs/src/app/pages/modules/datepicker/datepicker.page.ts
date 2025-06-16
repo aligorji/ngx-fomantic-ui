@@ -79,6 +79,7 @@ const exampleMobileFallbackTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-datepicker',
     templateUrl: './datepicker.page.html'
 })
@@ -178,6 +179,7 @@ export class DatepickerPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-datepicker-standard',
     template: exampleStandardTemplate
 })
@@ -190,12 +192,14 @@ export class DatepickerExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-datepicker-button',
     template: exampleButtonTemplate
 })
 export class DatepickerExampleButton {}
 
 @Component({
+    standalone: false,
     selector: 'example-datepicker-min-max',
     template: exampleMinMaxTemplate
 })
@@ -212,6 +216,7 @@ export class DatepickerExampleMinMax {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-datepicker-mobile-fallback',
     template: exampleMobileFallbackTemplate
 })

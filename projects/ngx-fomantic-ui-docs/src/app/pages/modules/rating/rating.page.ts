@@ -115,6 +115,7 @@ const exampleSizedTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-rating',
     templateUrl: './rating.page.html'
 })
@@ -169,6 +170,7 @@ export class RatingPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-rating-standard',
     template: exampleStandardTemplate
 })
@@ -178,18 +180,21 @@ export class RatingExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-rating-styled',
     template: exampleStyledTemplate
 })
 export class RatingExampleStyled {}
 
 @Component({
+    standalone: false,
     selector: 'example-rating-colored',
     template: exampleColoredTemplate
 })
 export class RatingExampleColored {}
 
 @Component({
+    standalone: false,
     selector: 'example-rating-sized',
     template: exampleSizedTemplate
 })

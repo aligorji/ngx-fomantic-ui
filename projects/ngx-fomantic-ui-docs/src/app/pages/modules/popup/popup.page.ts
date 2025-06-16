@@ -78,6 +78,7 @@ const exampleSizeTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-popup',
     templateUrl: './popup.page.html'
 })
@@ -244,6 +245,7 @@ export class MyComponent {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-popup-standard',
     template: exampleStandardTemplate,
     providers: [FuiPopupConfig]
@@ -251,6 +253,7 @@ export class MyComponent {
 export class PopupExampleStandard {}
 
 @Component({
+    standalone: false,
     selector: 'example-popup-template',
     template: exampleTemplateTemplate,
     providers: [FuiPopupConfig]
@@ -258,6 +261,7 @@ export class PopupExampleStandard {}
 export class PopupExampleTemplate {}
 
 @Component({
+    standalone: false,
     selector: 'example-popup-placement',
     template: examplePlacementTemplate,
     providers: [FuiPopupConfig]
@@ -268,6 +272,7 @@ export class PopupExamplePlacement {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-popup-size',
     template: exampleSizeTemplate,
     providers: [FuiPopupConfig]
@@ -275,6 +280,7 @@ export class PopupExamplePlacement {
 export class PopupExampleSize {}
 
 @Component({
+    standalone: false,
     selector: 'example-popup-width',
     template: exampleWidthTemplate,
     providers: [FuiPopupConfig]

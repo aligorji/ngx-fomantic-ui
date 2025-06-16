@@ -13,6 +13,7 @@ const exampleStandardTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-transition',
     templateUrl: './transition.page.html'
 })
@@ -113,6 +114,7 @@ export class MyComponent extends FuiTransition {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-transition-standard',
     template: exampleStandardTemplate
 })

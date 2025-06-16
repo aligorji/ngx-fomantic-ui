@@ -8,6 +8,7 @@ export interface IMessage {
 }
 
 @Component({
+  standalone: false,
   selector: 'fui-message',
   template: `
 <div [fuiTransition]="transitionController">

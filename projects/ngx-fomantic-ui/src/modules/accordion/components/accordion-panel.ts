@@ -3,6 +3,7 @@ import {FuiAccordionService} from '../services/accordion.service';
 import {Transition, TransitionController} from '../../transition/internal';
 
 @Component({
+  standalone: false,
   selector: 'fui-accordion-panel',
   exportAs: 'fuiAccordionPanel',
   template: `

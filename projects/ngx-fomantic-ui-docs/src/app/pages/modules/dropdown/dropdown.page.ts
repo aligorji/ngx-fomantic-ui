@@ -137,6 +137,7 @@ const exampleMenuTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-dropdown',
     templateUrl: './dropdown.page.html'
 })
@@ -205,12 +206,14 @@ export class DropdownPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-dropdown-file-menu',
     template: exampleFileMenuTemplate
 })
 export class DropdownExampleFileMenu {}
 
 @Component({
+    standalone: false,
     selector: 'example-dropdown-standard',
     template: exampleStandardTemplate
 })
@@ -220,12 +223,14 @@ export class DropdownExampleStandard {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-dropdown-styled',
     template: exampleStyledTemplate
 })
 export class DropdownExampleStyled {}
 
 @Component({
+    standalone: false,
     selector: 'example-dropdown-menu',
     template: exampleMenuTemplate
 })

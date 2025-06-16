@@ -15,6 +15,7 @@ import {FuiDropdownMenuItem} from '../../dropdown/internal';
 import {HandledEvent} from '../../../misc/util/internal';
 
 @Component({
+  standalone: false,
   selector: 'fui-select-option',
   template: `
 <span #templateSibling></span>

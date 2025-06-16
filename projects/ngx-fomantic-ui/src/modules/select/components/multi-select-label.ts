@@ -20,6 +20,7 @@ import { IOptionContext } from '../classes/select-base';
 const templateRef = TemplateRef;
 
 @Component({
+  standalone: false,
   selector: 'fui-multi-select-label',
   template: `
 <span #templateSibling></span>

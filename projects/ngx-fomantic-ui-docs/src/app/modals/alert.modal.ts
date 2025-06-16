@@ -7,6 +7,7 @@ interface IAlertModalContext {
 }
 
 @Component({
+    standalone: false,
     selector: 'demo-modal-alert',
     template: `
 <div class="header" *ngIf="modal.context.title">{{ modal.context.title }}</div>

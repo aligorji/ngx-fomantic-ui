@@ -20,6 +20,7 @@ export class CalendarRangeDateService extends CalendarRangeService {
 }
 
 @Component({
+  standalone: false,
   selector: 'fui-calendar-date-view',
   template: `
 <table class="ui celled center aligned unstackable table seven column day">

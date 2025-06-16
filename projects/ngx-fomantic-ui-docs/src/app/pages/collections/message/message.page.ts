@@ -36,6 +36,7 @@ const exampleIconTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-message',
     templateUrl: './message.page.html'
 })
@@ -142,18 +143,21 @@ export class MyComponent {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-message-standard',
     template: exampleStandardTemplate
 })
 export class MessageExampleStandard {}
 
 @Component({
+    standalone: false,
     selector: 'example-message-no-dismiss',
     template: exampleNoDismissTemplate
 })
 export class MessageExampleNoDismiss {}
 
 @Component({
+    standalone: false,
     selector: 'example-message-icon',
     template: exampleIconTemplate
 })

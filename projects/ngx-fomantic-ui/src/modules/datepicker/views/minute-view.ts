@@ -24,6 +24,7 @@ export class CalendarRangeMinuteService extends CalendarRangeService {
 }
 
 @Component({
+  standalone: false,
   selector: 'fui-calendar-minute-view',
   template: `
 <table class="ui celled center aligned unstackable table three column minute">

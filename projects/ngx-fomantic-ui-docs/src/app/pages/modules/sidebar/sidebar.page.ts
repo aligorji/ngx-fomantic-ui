@@ -44,6 +44,7 @@ const exampleDirectionTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-sidebar',
     templateUrl: './sidebar.page.html'
 })
@@ -107,12 +108,14 @@ export class SidebarPage {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-sidebar-standard',
     template: exampleStandardTemplate
 })
 export class SidebarExampleStandard {}
 
 @Component({
+    standalone: false,
     selector: 'example-sidebar-direction',
     template: exampleDirectionTemplate
 })

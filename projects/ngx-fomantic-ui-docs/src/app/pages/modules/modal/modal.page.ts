@@ -56,6 +56,7 @@ const exampleComponentTemplate = `
 `;
 
 @Component({
+    standalone: false,
     selector: 'demo-page-modal',
     templateUrl: './modal.page.html'
 })
@@ -232,6 +233,7 @@ this.modalService
 }
 
 @Component({
+    standalone: false,
     selector: 'example-modal-template',
     template: exampleTemplateTemplate
 })
@@ -267,6 +269,7 @@ interface IConfirmModalContext {
 }
 
 @Component({
+    standalone: false,
     selector: 'example-modal-confirm',
     template: exampleComponentModalTemplate
 })
@@ -285,6 +288,7 @@ export class ConfirmModal extends ComponentModalConfig<IConfirmModalContext, voi
 }
 
 @Component({
+    standalone: false,
     selector: 'example-modal-component',
     template: exampleComponentTemplate
 })

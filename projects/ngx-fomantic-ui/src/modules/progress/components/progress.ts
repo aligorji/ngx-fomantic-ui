@@ -1,6 +1,7 @@
 import {Component, HostBinding, Input} from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'fui-progress',
   template: `
 <div class="bar"
