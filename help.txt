@@ -31,3 +31,9 @@ https://github.com/aligorji/ngx-fomantic-ui
 npm login
 
 npm publish --access=public
+
+
+
+index.html
+
+https://s33.picofile.com/d/8485137434/b345324f-55f2-4129-9b3d-f5a5f93ae5dc/semantic_min-css
