@@ -1,9 +1,9 @@
 {
   "name": "@aligorji/ngx-fomantic-ui",
-  "version": "20.0.1",
+  "version": "20.0.2",
   "peerDependencies": {
-    "@angular/common": "^20.0.3",
-    "@angular/core": "^20.0.3",
+    "@angular/common": "^20.0.6",
+    "@angular/core": "^20.0.6",
     "date-fns": "^1.30.1",
     "element-closest": "^3.0.2",
     "popper.js": "^1.16.1"
